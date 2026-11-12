@@ -1,0 +1,51 @@
+<div class="admin-container">
+  <button class="btn-voltar" (click)="voltar()">← Voltar ao Painel</button>
+  
+  <h2 class="titulo-pagina">✏️ Painel do Administrador</h2>
+  
+  <div class="form-card">
+    
+    <!-- Dados Gerais do Livro -->
+    <div class="input-group">
+      <label>Título Geral do Livro:</label>
+      <input type="text" [(ngModel)]="livro.titulo" placeholder="Ex: O Poder da Oração">
+    </div>
+
+    <div class="input-group">
+      <label>Descrição Curta do Livro:</label>
+      <input type="text" [(ngModel)]="livro.descricao" placeholder="Ex: Reflexões diárias sobre a fé">
+    </div>
+
+    <div class="input-group">
+      <label>Seção de Destino:</label>
+      <select [(ngModel)]="livro.secao_id" (change)="onSecaoChange()">
+        <option [ngValue]="1">I. Ensinos Bíblicos</option>
+        <option [ngValue]="2">II. Palavra Profética</option>
+        <option [ngValue]="3">III. Ensinos Família (Restrito)</option>
+        <option [ngValue]="4">IV. Ensino Casais</option>
+        <option [ngValue]="5">V. Ensino Natureza</option>
+        <option [ngValue]="6">VI. Músicas</option>
+      </select>
+    </div>
+
+    <hr class="divisor">
+
+    <!-- Secção Dinâmica de Capítulos -->
+    <h3 class="subtitulo-capitulo">📖 Adicionando Capítulo {{ numeroCapituloAtual }}</h3>
+
+    <div class="input-group">
+      <label>Título desta Página / Capítulo:</label>
+      <input type="text" [(ngModel)]="paginaAtual.titulo" placeholder="Ex: Capítulo 1 - O Início">
+    </div>
+
+    <div class="input-group">
+      <label>Conteúdo da Meditação:</label>
+      <textarea [(ngModel)]="paginaAtual.conteudo" rows="6" placeholder="Escreva o texto desta página..."></textarea>
+    </div>
+
+    <!-- Botões de Ação idênticos ao Android -->
+    <button class="btn-proxima-pagina" (click)="adicionarProximaPagina()">Adicionar Próxima Página</button>
+    <button class="btn-salvar-completo" (click)="salvarLivroCompleto()">Salvar Livro Completo</button>
+  
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="admin-container">
+
+  
+  <!-- VISÃO 1: LISTA DE LEITORES -->
+  <div *ngIf="!leitorSelecionado">
+    <button class="btn-voltar" (click)="voltarPainel()">← Voltar ao Painel</button>
+    
+    <h2 class="titulo-pagina">Selecione um Leitor</h2>
+    <p class="subtitulo-pagina">Escolha para gerenciar as permissões de acesso</p>
+
+    <div class="cards-lista">
+      <div *ngFor="let leitor of leitores" class="card-leitor" (click)="selecionarLeitor(leitor)">
+        <div class="info-leitor">
+          <strong>{{ leitor.nome }}</strong>
+          <span>{{ leitor.email }}</span>
+        </div>
+        <span class="seta">→</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISÃO 2: PERMISSÕES DO LEITOR SELECIONADO -->
+  <div *ngIf="leitorSelecionado">
+    <button class="btn-voltar" (click)="voltarParaLista()">← Voltar aos Leitores</button>
+    
+    <h2 class="titulo-pagina">{{ leitorSelecionado.nome }}</h2>
+    <p class="subtitulo-pagina">Alterne as permissões de acesso aos livros restritos</p>
+
+    <div class="cards-lista">
+      <div *ngFor="let livro of livrosRestritos" class="card-livro-permissao">
+        <div class="info-livro">
+          <strong>{{ livro.titulo }}</strong>
+          <span [class.texto-liberado]="livro.liberado" [class.texto-bloqueado]="!livro.liberado">
+            🔒 {{ livro.liberado ? 'Acesso Liberado' : 'Acesso Bloqueado' }}
+          </span>
+        </div>
+        
+        <!-- Toggle Switch -->
+        <label class="switch">
+          <input type="checkbox" [checked]="livro.liberado" (change)="alternarLivro(livro)">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
+    <button class="btn-liberar-todos" (click)="liberarTodos()">
+      🔓 LIBERAR TODOS OS LIVROS
+    </button>
+  </div>
+
+</div>

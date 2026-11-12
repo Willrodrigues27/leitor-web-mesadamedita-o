@@ -1,0 +1,50 @@
+<div class="musicas-container">
+
+  <!-- ========================================== -->
+  <!-- TELA 1: LISTAGEM DE MÚSICAS                -->
+  <!-- ========================================== -->
+  <div *ngIf="!musicaSelecionada">
+    <div class="cabecalho-lista">
+      <button class="btn-voltar" (click)="voltarPainel()">← Voltar</button>
+      <h1 class="titulo-pagina">Músicas e Cifras</h1>
+    </div>
+
+    <!-- Mensagem se a lista estiver vazia -->
+    <div *ngIf="musicas.length === 0" class="mensagem-vazia">
+      Nenhuma música cadastrada ainda.
+    </div>
+
+    <div class="lista-itens">
+      <div *ngFor="let m of musicas" class="card-musica" (click)="selecionarMusica(m)">
+        <div class="info-musica">
+          <span class="nome-musica">{{ m.titulo }}</span>
+          <span class="nome-artista" *ngIf="m.artista">{{ m.artista }}</span>
+        </div>
+        <span class="seta">→</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- TELA 2: LEITOR DA CIFRA                    -->
+  <!-- ========================================== -->
+  <div *ngIf="musicaSelecionada" class="leitor-cifra-view">
+    <button class="btn-voltar" (click)="voltarParaLista()">← Voltar à Lista</button>
+
+    <div class="cabecalho-musica">
+      <h1 class="titulo-cifra">{{ musicaSelecionada.titulo }}</h1>
+      <h3 class="artista-cifra" *ngIf="musicaSelecionada.artista">{{ musicaSelecionada.artista }}</h3>
+    </div>
+
+    <div class="bloco-introducao" *ngIf="musicaSelecionada.introducao">
+      <strong>Introdução:</strong>
+      <span>{{ musicaSelecionada.introducao }}</span>
+    </div>
+
+    <!-- Aqui acontece a mágica do alinhamento. Não dê "Enter" ou espaços extras dentro da tag pre -->
+   <pre class="corpo-cifra">
+<span *ngFor="let linha of linhasFormatadas" [class.linha-acorde]="linha.isAcorde">{{ linha.texto }}
+</span>
+    </pre>
+
+</div>

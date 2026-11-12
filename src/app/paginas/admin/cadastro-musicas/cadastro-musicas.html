@@ -1,0 +1,33 @@
+<div class="admin-container">
+  
+  <button class="btn-voltar" (click)="voltar()">← Voltar ao Painel</button>
+  
+  <h2 class="titulo-pagina">🎵 Cadastrar Nova Música / Cifra</h2>
+  
+  <div class="form-card">
+    
+    <div class="input-group">
+      <label>Título da Música:</label>
+      <input type="text" [(ngModel)]="musica.titulo" placeholder="Ex: Grandioso És Tu">
+    </div>
+
+    <div class="input-group">
+      <label>Artista / Cantor (Opcional):</label>
+      <input type="text" [(ngModel)]="musica.artista" placeholder="Ex: Harpa Cristã">
+    </div>
+
+    <div class="input-group">
+      <label>Introdução (Acordes):</label>
+      <input type="text" [(ngModel)]="musica.introducao" placeholder="Ex: G  D/F#  Em  C">
+    </div>
+
+    <div class="input-group">
+      <label>Letra e Cifras (Cole com os espaços exatos):</label>
+      <textarea [(ngModel)]="musica.cifra" rows="12" placeholder="G       D
+Senhor meu Deus, quando eu maravilhado..."></textarea>
+    </div>
+
+    <button class="btn-salvar" (click)="salvarMusica()">SALVAR MÚSICA NO ACERVO</button>
+  
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="admin-container">
+  
+  <img src="logo_meditacao.jpg" alt="Logo" class="logo">
+  
+  <h1 class="titulo">Painel do Administrador</h1>
+  <p class="subtitulo">Gerencie o acesso dos leitores e o acervo da plataforma</p>
+
+  <div class="cards-container">
+    
+    <!--  Card 1: Permissões Individuais  -->
+    <div class="admin-card" (click)="abrirPermissoes()">
+      <h2 class="card-titulo">🔑 Permissões Individuais</h2>
+      <p class="card-desc">Gerencie o acesso de leitores específicos</p>
+    </div>
+
+ <!-- Card 2: Cadastrar Novo Livro -->
+  <div class="admin-card" (click)="cadastrarLivro()" style="cursor: pointer;">
+    <h2 class="card-titulo">📚 Cadastrar Novo Livro</h2>
+    <p class="card-desc">Escreva novos textos e publicações para o acervo</p>
+  </div>
+
+    <!-- Card 3: Cadastrar Música / Cifra -->
+    <div class="admin-card" (click)="cadastrarMusica()">
+      <h2 class="card-titulo">🎵 Cadastrar Música / Cifra</h2>
+      <p class="card-desc">Adicione novas letras formatadas com cifras</p>
+    </div>
+
+  </div>
+
+  <button class="btn-modo-leitor" (click)="navegarComoLeitor()">
+    📖 Navegar como Leitor
+  </button>
+
+</div>

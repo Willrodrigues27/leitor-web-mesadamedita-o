@@ -1,0 +1,82 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #FFFDF9; /* Android background_app */
+  font-family: sans-serif;
+}
+
+.login-form-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2C3E50; /* Android primary_color */
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  font-size: 14px;
+  color: #7F8C8D; /* Android text_secondary */
+  margin-bottom: 24px;
+}
+
+.form-inputs {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 12px;
+}
+
+.text-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #2C3E50;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+}
+
+.text-input:focus {
+  border-width: 2px;
+}
+
+.btn-acao {
+  width: 100%;
+  height: 56px;
+  background-color: #2C3E50;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.toggle-text {
+  color: #2C3E50;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+}

@@ -1,0 +1,31 @@
+<div class="leitor-container" *ngIf="capitulos.length > 0; else semCapitulos">
+  <button class="btn-voltar" (click)="voltarSumario()">← Voltar ao Sumário</button>
+
+  <div class="cabecalho-pagina">
+    <h2>Página {{ paginaAtualIndex + 1 }} de {{ capitulos.length }}</h2>
+    <h3>{{ capitulos[paginaAtualIndex]?.tituloCapitulo }}</h3>
+  </div>
+
+  <div class="conteudo-texto">
+    <p>{{ capitulos[paginaAtualIndex]?.conteudo }}</p>
+  </div>
+
+  <div class="botoes-navegacao">
+    <button class="btn-nav" *ngIf="paginaAtualIndex > 0" (click)="paginaAnterior()">
+      Anterior
+    </button>
+    
+    <button class="btn-nav principal" *ngIf="paginaAtualIndex < capitulos.length - 1" (click)="proximaPagina()">
+      Próximo
+    </button>
+  </div>
+</div>
+
+<ng-template #semCapitulos>
+  <div class="leitor-container">
+    <button class="btn-voltar" (click)="voltarSumario()">← Voltar ao Sumário</button>
+    <p style="text-align: center; margin-top: 50px; color: #888; font-size: 16px;">
+      Nenhum capítulo cadastrado para este livro.
+    </p>
+  </div>
+</ng-template>

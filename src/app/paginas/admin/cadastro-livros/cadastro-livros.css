@@ -1,0 +1,99 @@
+.admin-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
+  color: #2C3E50;
+}
+
+.titulo-pagina {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-voltar {
+  background: none;
+  border: none;
+  color: #2C3E50;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.input-group input, .input-group select, .input-group textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.divisor {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 25px 0;
+}
+
+.subtitulo-capitulo {
+  color: #27ae60;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* Botão Azul (Adicionar Próxima Página) */
+.btn-proxima-pagina {
+  width: 100%;
+  padding: 14px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.btn-proxima-pagina:hover {
+  background-color: #2471a3;
+}
+
+/* Botão Verde (Salvar Livro Completo) */
+.btn-salvar-completo {
+  width: 100%;
+  padding: 14px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-salvar-completo:hover {
+  background-color: #219653;
+}

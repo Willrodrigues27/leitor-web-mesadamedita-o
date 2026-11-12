@@ -1,0 +1,28 @@
+<div class="sumario-container">
+
+  <button class="btn-voltar-inteligente" (click)="voltar()">
+    ← Voltar
+  </button>
+  
+  <!-- SearchView do Sumário -->
+  <div class="search-view">
+    <span class="icone-lupa">🔍</span>
+    <input type="text" placeholder="Pesquisa Rápida..." (input)="executarBusca(searchInput.value)" #searchInput>
+  </div>
+
+  <!-- TextView Saudação -->
+  <h2 class="saudacao">{{ saudacao }}</h2>
+
+  <!-- RecyclerView das Seções -->
+  <ul class="lista-secoes">
+    @for (secao of secoes; track secao.id) {
+      
+      <li class="card-secao" (click)="abrirSecao(secao)">
+        <span class="nome-secao">{{ secao.nome }}</span>
+        <span class="seta">➔</span>
+      </li>
+
+    }
+  </ul>
+
+</div>

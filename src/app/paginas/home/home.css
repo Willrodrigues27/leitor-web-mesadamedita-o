@@ -1,0 +1,75 @@
+.home-container {
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.btn-voltar {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  padding: 0 0 20px 0;
+  cursor: pointer;
+}
+
+/* Estilos da Barra de Pesquisa */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  color: #b3b3b3;
+  margin-right: 12px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #e0e0e0;
+}
+
+/* Estilos da Lista de Livros */
+.lista-livros {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.livro-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.livro-titulo {
+  font-size: 18px;
+  font-weight: 700; /* Bold */
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.livro-descricao {
+  font-size: 15px;
+  color: #b3b3b3; /* Cinza claro igual à imagem */
+}
+
+.mensagem-vazia {
+  text-align: center;
+  color: #999;
+  margin-top: 40px;
+}
